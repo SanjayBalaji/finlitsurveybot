@@ -1,7 +1,12 @@
 import telebot
+from dotenv import load_dotenv
+import os
 
-# Replace 'YOUR_TELEGRAM_BOT_TOKEN' with the actual token you obtained from BotFather
-BOT_TOKEN = "7465884972:AAGghEJ9Vi2uYgTlZfVEGs7vspxXmPweR2E"
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the bot token from the environment variable
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
